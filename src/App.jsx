@@ -2,7 +2,7 @@ import './App.css'
 
 // components/Navbar.jsx
 import { useState, useEffect } from 'react';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
+// import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion'
 
 const Navbar = () => {
@@ -78,7 +78,7 @@ const Navbar = () => {
                 {link.name}
               </motion.a>
             ))}
-            <button
+            {/* <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-full focus:outline-none"
             >
@@ -87,7 +87,7 @@ const Navbar = () => {
               ) : (
                 <MoonIcon className="h-5 w-5 text-gray-700" />
               )}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
@@ -685,6 +685,7 @@ const Footer = () => {
 };
 
 // App.js
+import profile from './assets/manonmanipro.jpeg'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -742,7 +743,7 @@ function App() {
                     <div className="absolute -inset-8 rounded-3xl bg-gradient-to-r from-indigo-400 to-purple-600 opacity-20 blur-xl"></div>
                     <div className="relative rounded-2xl overflow-hidden">
                       <img
-                        src="./src/assets/manonmanipro.jpeg"
+                        src={profile}
                         alt="Profile"
                         className="w-full max-w-md h-auto rounded-2xl shadow-2xl"
                       />
